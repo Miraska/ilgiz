@@ -1,124 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>English Master - Английский для начинающих</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">English Master</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<body>// Компонент Header
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <div class="logo-icon">📚</div>
-      <h1>English Mastery</h1>
-    </div>
-    <nav class="nav">
-      <a href="/" class="nav-link">
-        <span class="nav-icon">🏠</span>
-        Главная
-      </a>
-      <a href="/courses" class="nav-link">
-        <span class="nav-icon">📖</span>
-        Курсы
-      </a>
-      <a href="/cart" class="nav-link">
-        <span class="nav-icon">🛒</span>
-        Корзина
-      </a>
-    </nav>
-  </div>
-</header>
-// Компонент Course
-<div class="course-page">
-  <div class="course-container">
-    <div class="course-hero">
-      <div class="course-info">
-        <div class="course-breadcrumb">
-          <a href="/courses">Курсы</a> / <span>Английский для начинающих</span>
-        </div>
-        <h1>Английский для начинающих</h1>
-        <div class="course-rating">
-          <span class="stars">★★★★★</span>
-          <span class="rating-text">4.9 (245 отзывов)</span>
-        </div>
-        <p class="course-description">
-          Полный курс английского языка для начинающих. Освойте базовую грамматику, 
-          essential vocabulary и научитесь уверенно общаться в повседневных ситуациях.
-        </p>
-        
-        <div class="course-features">
-          <div class="feature">
-            <span>📅</span>
-            <div>
-              <strong>Длительность</strong>
-              <p>3 месяца</p>
+    <main class="container">
+        <div class="product-detail">
+            <div class="product-image-large">Изображение курса</div>
+            <div class="product-details">
+                <h1>Английский для начинающих</h1>
+                <div class="product-price-large">4 990 ₽</div>
+                <div class="product-description">
+                    <p>Этот курс идеально подходит для тех, кто только начинает изучать английский язык. Вы освоите базовую грамматику, лексику и научитесь строить простые предложения.</p>
+                    <p>Курс включает:</p>
+                    <ul>
+                        <li>20 уроков с видео-материалами</li>
+                        <li>Интерактивные упражнения</li>
+                        <li>Аудио-материалы для тренировки произношения</li>
+                        <li>Тесты для проверки знаний</li>
+                        <li>Поддержку преподавателя</li>
+                        <li>Доступ к материалам на 6 месяцев</li>
+                        <li>Сертификат о прохождении курса</li>
+                    </ul>
+                </div>
+                <a href="cart.html" class="btn">Добавить в корзину</a>
             </div>
-          </div>
-          <div class="feature">
-            <span>🎓</span>
-            <div>
-              <strong>Уровень</strong>
-              <p>Начальный (A1)</p>
-            </div>
-          </div>
-          <div class="feature">
-            <span>📚</span>
-            <div>
-              <strong>Уроков</strong>
-              <p>36 занятий</p>
-            </div>
-          </div>
         </div>
-        
-        <div class="course-price">
-          <div class="price-main">12 900 ₽</div>
-          <div class="price-old">15 900 ₽</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 English Master - Онлайн платформа изучения английского языка</p>
         </div>
-        
-        <button class="btn-primary btn-large">
-          <span>🛒</span>
-          Добавить в корзину
-        </button>
-      </div>
-      
-      <div class="course-preview">
-        <div class="preview-card">
-          <div class="preview-header">
-            <span>🎬</span>
-            <h3>Предпросмотр курса</h3>
-          </div>
-          <div class="preview-content">
-            <p>Посмотрите бесплатное введение к курсу</p>
-            <button class="btn-secondary">Смотреть preview</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-// Компонент Footer
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>English Mastery</h3>
-        <p>Освойте английский с лучшими преподавателями</p>
-      </div>
-      <div class="footer-links">
-        <a href="#" class="footer-link">Контакты</a>
-        <a href="#" class="footer-link">О нас</a>
-        <a href="#" class="footer-link">Помощь</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2023 English Mastery. Все права защищены.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
 </body>
-
 </html>
-
