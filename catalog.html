@@ -1,68 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catalog</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Ювелирный Дом</h1>
-            </div>
-            <nav class="nav">
-                <a href="/" class="nav-link">Главная</a>
-                <a href="/catalog" class="nav-link">Каталог</a>
-                <a href="/cart" class="nav-link">Корзина</a>
-            </nav>
-        </div>
-    </header>
-    <div class="catalog">
-        <div class="catalog-controls">
-            <div class="search">
-                <input type="text" placeholder="Поиск товаров..." class="input-field" />
-            </div>
-            <div class="filters">
-                <select class="select-field">
-                    <option>Все категории</option>
-                    <option>Кольца</option>
-                    <option>Серьги</option>
-                    <option>Подвески</option>
-                    <option>Браслеты</option>
-                </select>
-
-                <select class="select-field">
-                    <option>Сортировка по умолчанию</option>
-                    <option>По возрастанию цены</option>
-                    <option>По убыванию цены</option>
-                </select>
-            </div>
-        </div>
-        <div class="products-grid">
-            {/* Карточки товаров */}
-            <div class="product-card">
-                <img src="/path/to/image.jpg" alt="Название товара" />
-                <h3>Название товара</h3>
-                <p class="price">25 000 ₽</p>
-                <button class="btn-primary">В корзину</button>
-            </div>
-            {/* Другие карточки товаров */}
-        </div>
+// Компонент Home
+<div className="home">
+  <section className="hero">
+    <div className="hero-content">
+      <div className="hero-badge">
+        <span>🚀</span>
+        Начните говорить свободно
+      </div>
+      <h1>Английский язык для реальной жизни</h1>
+      <p>Интерактивные курсы с носителями языка и современной методикой обучения</p>
+      <button className="btn-primary">
+        <span>📚</span>
+        Начать обучение
+      </button>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p>© 2023 Ювелирный Дом. Все права защищены.</p>
-            <div class="footer-links">
-                <a href="#" class="footer-link">Контакты</a>
-                <a href="#" class="footer-link">О нас</a>
-                <a href="#" class="footer-link">Доставка</a>
-            </div>
-        </div>
-    </footer>
-</body>
+    <div className="hero-image">
+      <div className="floating-card card-1">
+        <span>🗣️</span>
+        Разговорная практика
+      </div>
+      <div className="floating-card card-2">
+        <span>📝</span>
+        Грамматика
+      </div>
+      <div className="floating-card card-3">
+        <span>🎧</span>
+        Аудирование
+      </div>
+    </div>
+  </section>
 
-</html>
+  <section className="newsletter">
+    <div className="newsletter-content">
+      <h2>Получите бесплатный урок</h2>
+      <p>Подпишитесь на рассылку и получите доступ к первому уроку бесплатно</p>
+      <div className="newsletter-form">
+        <input 
+          type="email" 
+          placeholder="Ваш email" 
+          className="input-field"
+        />
+        <button className="btn-secondary">
+          <span>✉️</span>
+          Получить урок
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
