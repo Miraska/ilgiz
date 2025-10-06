@@ -1,52 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Ювелирный Дом</h1>
-            </div>
-            <nav class="nav">
-                <a href="/" class="nav-link">Главная</a>
-                <a href="/catalog" class="nav-link">Каталог</a>
-                <a href="/cart" class="nav-link">Корзина</a>
-            </nav>
+// Компонент Course
+<div className="course-page">
+  <div className="course-container">
+    <div className="course-hero">
+      <div className="course-info">
+        <div className="course-breadcrumb">
+          <a href="/courses">Курсы</a> / <span>Английский для начинающих</span>
         </div>
-    </header>
-    <div class="product-page">
-        <div class="product-container">
-            <div class="product-image">
-                <img src="./img.jfif" alt="Название товара" />
-            </div>
-
-            <div class="product-details">
-                <h1>Название товара</h1>
-                <p class="product-description">
-                    Подробное описание товара, материалы, размеры и другая важная информация.
-                </p>
-                <p class="product-price">25 000 ₽</p>
-                <button class="btn-primary">Добавить в корзину</button>
-            </div>
+        <h1>Английский для начинающих</h1>
+        <div className="course-rating">
+          <span className="stars">★★★★★</span>
+          <span className="rating-text">4.9 (245 отзывов)</span>
         </div>
+        <p className="course-description">
+          Полный курс английского языка для начинающих. Освойте базовую грамматику, 
+          essential vocabulary и научитесь уверенно общаться в повседневных ситуациях.
+        </p>
+        
+        <div className="course-features">
+          <div className="feature">
+            <span>📅</span>
+            <div>
+              <strong>Длительность</strong>
+              <p>3 месяца</p>
+            </div>
+          </div>
+          <div className="feature">
+            <span>🎓</span>
+            <div>
+              <strong>Уровень</strong>
+              <p>Начальный (A1)</p>
+            </div>
+          </div>
+          <div className="feature">
+            <span>📚</span>
+            <div>
+              <strong>Уроков</strong>
+              <p>36 занятий</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="course-price">
+          <div className="price-main">12 900 ₽</div>
+          <div className="price-old">15 900 ₽</div>
+        </div>
+        
+        <button className="btn-primary btn-large">
+          <span>🛒</span>
+          Добавить в корзину
+        </button>
+      </div>
+      
+      <div className="course-preview">
+        <div className="preview-card">
+          <div className="preview-header">
+            <span>🎬</span>
+            <h3>Предпросмотр курса</h3>
+          </div>
+          <div className="preview-content">
+            <p>Посмотрите бесплатное введение к курсу</p>
+            <button className="btn-secondary">Смотреть preview</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p>© 2023 Ювелирный Дом. Все права защищены.</p>
-            <div class="footer-links">
-                <a href="#" class="footer-link">Контакты</a>
-                <a href="#" class="footer-link">О нас</a>
-                <a href="#" class="footer-link">Доставка</a>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+  </div>
+</div>
