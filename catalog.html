@@ -1,106 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>English Master - Каталог</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">English Master</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="active">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<body>// Компонент Header
-// Компонент Catalog
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <div class="logo-icon">📚</div>
-      <h1>English Mastery</h1>
-    </div>
-    <nav class="nav">
-      <a href="/" class="nav-link">
-        <span class="nav-icon">🏠</span>
-        Главная
-      </a>
-      <a href="/courses" class="nav-link">
-        <span class="nav-icon">📖</span>
-        Курсы
-      </a>
-      <a href="/cart" class="nav-link">
-        <span class="nav-icon">🛒</span>
-        Корзина
-      </a>
-    </nav>
-  </div>
-</header>
-// Компонент Home
-<div classs="home">
-  <section classs="hero">
-    <div classs="hero-content">
-      <div classs="hero-badge">
-        <span>🚀</span>
-        Начните говорить свободно
-      </div>
-      <h1>Английский язык для реальной жизни</h1>
-      <p>Интерактивные курсы с носителями языка и современной методикой обучения</p>
-      <button classs="btn-primary">
-        <span>📚</span>
-        Начать обучение
-      </button>
-    </div>
-    <div classs="hero-image">
-      <div classs="floating-card card-1">
-        <span>🗣️</span>
-        Разговорная практика
-      </div>
-      <div classs="floating-card card-2">
-        <span>📝</span>
-        Грамматика
-      </div>
-      <div classs="floating-card card-3">
-        <span>🎧</span>
-        Аудирование
-      </div>
-    </div>
-  </section>
+    <main class="container">
+        <h1>Каталог курсов</h1>
+        
+        <div class="catalog-controls">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск по товарам...">
+            </div>
+            
+            <div class="filters">
+                <select>
+                    <option value="">Все категории</option>
+                    <option value="beginner">Для начинающих</option>
+                    <option value="intermediate">Средний уровень</option>
+                    <option value="advanced">Продвинутый уровень</option>
+                    <option value="business">Бизнес-английский</option>
+                </select>
+                
+                <select>
+                    <option value="">Сортировка по цене</option>
+                    <option value="low">От дешевых к дорогим</option>
+                    <option value="high">От дорогих к дешевым</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Английский для начинающих</h3>
+                    <p>Курс для тех, кто только начинает изучать английский язык</p>
+                    <div class="product-price">4 990 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Бизнес-английский</h3>
+                    <p>Специализированный курс для делового общения</p>
+                    <div class="product-price">7 990 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Подготовка к IELTS</h3>
+                    <p>Интенсивный курс подготовки к международному экзамену</p>
+                    <div class="product-price">9 990 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Разговорный английский</h3>
+                    <p>Улучшите свои навыки общения на английском</p>
+                    <div class="product-price">6 490 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
 
-  <section classs="newsletter">
-    <div classs="newsletter-content">
-      <h2>Получите бесплатный урок</h2>
-      <p>Подпишитесь на рассылку и получите доступ к первому уроку бесплатно</p>
-      <div classs="newsletter-form">
-        <input 
-          type="email" 
-          placeholder="Ваш email" 
-          classs="input-field"
-        />
-        <button classs="btn-secondary">
-          <span>✉️</span>
-          Получить урок
-        </button>
-      </div>
-    </div>
-  </section>
-</div>
-// Компонент Footer
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>English Mastery</h3>
-        <p>Освойте английский с лучшими преподавателями</p>
-      </div>
-      <div class="footer-links">
-        <a href="#" class="footer-link">Контакты</a>
-        <a href="#" class="footer-link">О нас</a>
-        <a href="#" class="footer-link">Помощь</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2023 English Mastery. Все права защищены.</p>
-    </div>
-  </div>
-</footer>
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Английский для путешествий</h3>
+                    <p>Полезные фразы и выражения для поездок за границу</p>
+                    <div class="product-price">3 990 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">Изображение курса</div>
+                <div class="product-info">
+                    <h3>Грамматика английского</h3>
+                    <p>Подробный разбор всех грамматических правил</p>
+                    <div class="product-price">5 490 ₽</div>
+                    <a href="product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 English Master - Онлайн платформа изучения английского языка</p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
