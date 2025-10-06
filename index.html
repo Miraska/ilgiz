@@ -1,54 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+// Компонент Catalog
+<div className="catalog">
+  <div className="catalog-header">
+    <h1>Наши курсы</h1>
+    <p>Выберите подходящий курс для вашего уровня</p>
+  </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Ювелирный Дом</h1>
-            </div>
-            <nav class="nav">
-                <a href="/" class="nav-link">Главная</a>
-                <a href="/catalog" class="nav-link">Каталог</a>
-                <a href="/cart" class="nav-link">Корзина</a>
-            </nav>
-        </div>
-    </header>
-    <div class="home">
-        <section class="banner">
-            <div class="banner-content">
-                <h2>Искусство в каждой детали</h2>
-                <p>Элегантные украшения для особых моментов</p>
-                <button class="btn-primary">Перейти в каталог</button>
-            </div>
-        </section>
-        <section class="newsletter">
-            <h3>Подпишитесь на рассылку</h3>
-            <p>Получайте эксклюзивные предложения и новинки первыми</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Ваш email" class="input-field" />
-                <button class="btn-secondary">Подписаться</button>
-            </div>
-        </section>
+  <div className="catalog-controls">
+    <div className="search-box">
+      <span className="search-icon">🔍</span>
+      <input 
+        type="text" 
+        placeholder="Поиск курсов..." 
+        className="input-field"
+      />
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p>© 2023 Ювелирный Дом. Все права защищены.</p>
-            <div class="footer-links">
-                <a href="#" class="footer-link">Контакты</a>
-                <a href="#" class="footer-link">О нас</a>
-                <a href="#" class="footer-link">Доставка</a>
-            </div>
-        </div>
-    </footer>
-</body>
+    
+    <div className="filter-controls">
+      <select className="select-field">
+        <option>Все уровни</option>
+        <option>Начальный (A1-A2)</option>
+        <option>Средний (B1-B2)</option>
+        <option>Продвинутый (C1-C2)</option>
+      </select>
+      
+      <select className="select-field">
+        <option>Сортировка по популярности</option>
+        <option>По возрастанию цены</option>
+        <option>По убыванию цены</option>
+        <option>По рейтингу</option>
+      </select>
+    </div>
+  </div>
 
-</html>
+  <div className="courses-grid">
+    <div className="course-card">
+      <div className="course-badge">🔥 Популярный</div>
+      <div className="course-image">
+        <span>🎯</span>
+      </div>
+      <div className="course-content">
+        <h3>Английский для начинающих</h3>
+        <p>Освойте базовую грамматику и лексику для повседневного общения</p>
+        <div className="course-meta">
+          <span className="meta-item">⏱️ 36 уроков</span>
+          <span className="meta-item">👨‍🏫 2 преподавателя</span>
+        </div>
+        <div className="course-footer">
+          <div className="price">12 900 ₽</div>
+          <button className="btn-primary">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+    
+    {/* Другие карточки курсов */}
+  </div>
+</div>
