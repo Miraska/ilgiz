@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #424242;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
   line-height: 1.6;
+  background-color: #f8fafc;
 }
 
 .container {
@@ -19,66 +20,89 @@ body {
 
 /* Кнопки и ссылки */
 .btn-primary, .btn-secondary, .nav-link, .footer-link {
-  display: inline-block;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   font-weight: 500;
-  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .btn-primary {
-  background-color: #d4af37;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
-  border: none;
-  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #b8941f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
-  background-color: #1a237e;
-  color: white;
-  border: none;
-  cursor: pointer;
+  background-color: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
 }
 
 .btn-secondary:hover {
-  background-color: #000051;
+  background-color: #f0f9ff;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 16px;
 }
 
 .nav-link {
-  color: #424242;
+  color: #475569;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
 
 .nav-link:hover {
-  color: #d4af37;
+  color: #2563eb;
+  background-color: #f0f9ff;
 }
 
 .footer-link {
-  color: #f5f5f5;
+  color: #cbd5e1;
+  padding: 4px 0;
 }
 
 .footer-link:hover {
-  color: #d4af37;
+  color: white;
 }
 
 /* Поля ввода */
 .input-field, .select-field {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.input-field:focus, .select-field:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 /* Шапка */
 .header {
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 15px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header .container {
@@ -87,187 +111,476 @@ body {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo h1 {
-  font-family: 'Playfair Display', serif;
-  color: #1a237e;
+  font-family: 'Merriweather', serif;
+  color: #1e3a8a;
+  font-size: 24px;
+}
+
+.logo-icon {
+  font-size: 28px;
 }
 
 .nav {
   display: flex;
-  gap: 20px;
+  gap: 8px;
+}
+
+.nav-icon {
+  font-size: 16px;
 }
 
 /* Подвал */
 .footer {
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
   color: white;
-  padding: 30px 0;
-  margin-top: 50px;
+  padding: 40px 0 20px;
+  margin-top: 80px;
 }
 
-.footer .container {
+.footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 12px;
 }
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+  text-align: center;
+  color: #cbd5e1;
 }
 
 /* Главная страница */
-.banner {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/path/to/banner-image.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0;
+  min-height: 600px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f9ff;
+  color: #0369a1;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  position: relative;
+  height: 400px;
+}
+
+.floating-card {
+  position: absolute;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  gap: 12px;
+  font-weight: 500;
 }
 
-.banner-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.card-1 {
+  top: 20px;
+  left: 0;
+  animation: float 3s ease-in-out infinite;
 }
 
-.banner-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+.card-2 {
+  top: 120px;
+  right: 0;
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+.card-3 {
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 3s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .newsletter {
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
   padding: 60px 0;
   text-align: center;
-  background-color: #f5f5f5;
+  border-radius: 20px;
+  margin: 40px 0;
 }
 
-.newsletter h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 15px;
+.newsletter h2 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 16px;
+  font-size: 2rem;
 }
 
 .newsletter-form {
   display: flex;
+  gap: 12px;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Каталог */
+.catalog-header {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+
+.catalog-header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
 .catalog-controls {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  align-items: center;
+  margin-bottom: 40px;
   flex-wrap: wrap;
-  gap: 15px;
-}
-
-.search, .filters {
-  display: flex;
-  gap: 15px;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-.product-card {
+  gap: 20px;
   background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
 }
 
-.product-card img {
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.search-box .input-field {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 15px;
+  padding-left: 45px;
 }
 
-.product-card h3 {
-  margin-bottom: 10px;
-}
-
-.product-card .price {
-  font-weight: bold;
-  color: #d4af37;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-/* Страница товара */
-.product-page {
-  padding: 30px 0;
-}
-
-.product-container {
+.filter-controls {
   display: flex;
-  gap: 50px;
-  margin-bottom: 50px;
+  gap: 16px;
 }
 
-.product-image {
-  flex: 1;
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
-.product-image img {
-  width: 50%;
-  border-radius: 8px;
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.product-details {
-  flex: 1;
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.product-details h1 {
-  font-family: 'Playfair Display', serif;
+.course-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #f97316;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.course-image {
+  height: 160px;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.course-content {
+  padding: 24px;
+}
+
+.course-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.course-content p {
+  color: #64748b;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
-.product-description {
+.course-meta {
+  display: flex;
+  gap: 16px;
   margin-bottom: 20px;
-  line-height: 1.8;
+  font-size: 12px;
+  color: #64748b;
 }
 
-.product-price {
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #d4af37;
-  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* Страница курса */
+.course-page {
+  padding: 40px 0;
+}
+
+.course-hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.course-breadcrumb {
+  color: #64748b;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.course-breadcrumb a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.course-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.course-info h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 18px;
+}
+
+.rating-text {
+  color: #64748b;
+}
+
+.course-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #475569;
+}
+
+.course-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature span {
+  font-size: 24px;
+  background: #f0f9ff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.feature strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1e293b;
+}
+
+.feature p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.course-price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.price-main {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.price-old {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 2px solid #e2e8f0;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.preview-header h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.preview-content p {
+  color: #64748b;
+  margin-bottom: 20px;
 }
 
 /* Адаптивность */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .course-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .header .container, .footer .container {
+  .header .container {
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
   }
   
   .catalog-controls {
     flex-direction: column;
   }
   
-  .product-container {
+  .filter-controls {
+    width: 100%;
     flex-direction: column;
   }
   
   .newsletter-form {
     flex-direction: column;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
   }
 }
