@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Ювелирный Дом</h1>
+            </div>
+            <nav class="nav">
+                <a href="/" class="nav-link">Главная</a>
+                <a href="/catalog" class="nav-link">Каталог</a>
+                <a href="/cart" class="nav-link">Корзина</a>
+            </nav>
+        </div>
+    </header>
+    <div class="catalog">
+        <div class="catalog-controls">
+            <div class="search">
+                <input type="text" placeholder="Поиск товаров..." class="input-field" />
+            </div>
+            <div class="filters">
+                <select class="select-field">
+                    <option>Все категории</option>
+                    <option>Кольца</option>
+                    <option>Серьги</option>
+                    <option>Подвески</option>
+                    <option>Браслеты</option>
+                </select>
+
+                <select class="select-field">
+                    <option>Сортировка по умолчанию</option>
+                    <option>По возрастанию цены</option>
+                    <option>По убыванию цены</option>
+                </select>
+            </div>
+        </div>
+        <div class="products-grid">
+            {/* Карточки товаров */}
+            <div class="product-card">
+                <img src="/path/to/image.jpg" alt="Название товара" />
+                <h3>Название товара</h3>
+                <p class="price">25 000 ₽</p>
+                <button class="btn-primary">В корзину</button>
+            </div>
+            {/* Другие карточки товаров */}
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Ювелирный Дом. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Контакты</a>
+                <a href="#" class="footer-link">О нас</a>
+                <a href="#" class="footer-link">Доставка</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
